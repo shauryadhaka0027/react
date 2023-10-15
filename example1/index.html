@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> 
+    <script type="text/babel"> 
+      const rootElement=document.getElementById("root")
+      const rootCreate=ReactDOM.createRoot(rootElement)
+    
+    const style1={
+      border:"2px solid black",
+      margin:"auto",
+      width:"40%"
+    }
+
+    const Super=(props)=>{
+      return (
+        <div className="Super-card" style={style1}>
+          <p> Name:{props.name}</p>  
+          <p> Hobbies :{props.hobbies.join(",")}</p>
+         <p>
+          Has Super Powers :
+          <span style={{ color: props.hasSuperPowers ? "green" : "red" }}>
+            {props.hasSuperPowers ? "Yes" : "No"}
+          </span>
+          
+          
+          </p>
+          <div style={{color :"red"}}>
+            <p> Street :{props.address.street}</p>
+            <p> city :{props.address.city}</p>
+          </div>
+          <p>age:{props.age}</p>
+        </div>
+      )
+    }
+
+    function App(){
+      return (
+        <div>
+          <Super
+  name="shaurya"
+  hobbies={["dhaka","shaurta"]}
+  hasSuperPowers={true} 
+  address={{street:"gyan",city:"Bijnor" }}
+  age="24"
+/>
+<Super
+  name="shaurya"
+  hobbies={["dhaka","shaurta"]}
+  hasSuperPower={false} 
+  address={{street:"gyan",city:"Bijnor" }}
+  age="24"
+/>
+
+        </div>
+      )
+    }
+
+    rootCreate.render(<App/>);
+    </script>
+  </body>
+</html>
