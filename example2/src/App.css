@@ -1,0 +1,41 @@
+h1{
+  text-align: center;
+  
+}
+
+tr{
+  cursor: pointer;
+}
+.input1 input{
+  margin: 0px 0px 0px 117px ;
+  margin-top: 35px;
+  width: 60%;
+  height: 50px;
+}
+.input1 button{
+  height: 35px;
+  margin: 0px 0px 0px 270px;
+  margin-top: 15px;
+  color: white;
+  background-color: blue;
+}
+.table{
+
+  margin: 20px 0px 0px 500px;
+}
+
+tr th{
+  padding: 5px;
+  height: 30px;
+  width: 50px;
+  margin: 20px;
+  background-color: blue;
+  color: white;
+}
+td{
+  height: 20px;
+  border: 1px solid grey;
+}
+table{
+  border: 2px solid grey;
+}
